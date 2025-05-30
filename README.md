@@ -34,12 +34,6 @@ source venv/bin/activate
 Com o ambiente virtual ativado, instale as bibliotecas necessárias:
 
 ```bash
-pip install -r requirements.txt
-```
-
-**Ou, se preferir, instale manualmente:**
-
-```bash
 pip install pandas numpy networkx matplotlib scikit-learn tensorflow
 ```
 
