@@ -1,55 +1,125 @@
+# Projeto Python com Machine Learning
 
-# Predição de Métricas em Grafos Temporais com RNN
+Este projeto utiliza bibliotecas de machine learning e análise de dados como TensorFlow, scikit-learn, pandas e outras.
 
-Este repositório contém código para predição de métricas em grafos temporais utilizando modelos de redes neurais como MLP, LSTM e CNN, desenvolvido para a disciplina de Fundamentos de IA.
+## Configuração do Ambiente
 
-## ✅ Criando ambiente virtual Python
+### Pré-requisitos
 
-Recomenda-se o uso de Python **3.8** ou superior.
+- Python 3.8 ou superior
+- pip (gerenciador de pacotes do Python)
 
-1. Crie o ambiente virtual:
+### Configuração do Ambiente Virtual
+
+#### 1. Clone o repositório (se aplicável)
 
 ```bash
+git clone <seu-repositorio>
+cd <nome-do-projeto>
+```
+
+#### 2. Crie um ambiente virtual
+
+```bash
+# No Windows
 python -m venv venv
+
+# No macOS/Linux
+python3 -m venv venv
 ```
 
-2. Ative o ambiente virtual:
+#### 3. Ative o ambiente virtual
 
-- **Windows:**
+**Windows:**
 
 ```bash
+# Command Prompt
 venv\Scripts\activate
+
+# PowerShell
+venv\Scripts\Activate.ps1
+
+# Git Bash
+source venv/Scripts/activate
 ```
 
-- **Linux/MacOS:**
+**macOS/Linux:**
 
 ```bash
 source venv/bin/activate
 ```
 
----
-
-## ✅ Instalando dependências
-
-Com o ambiente virtual ativado, instale as bibliotecas necessárias:
+#### 4. Instale as dependências
 
 ```bash
-pip install pandas numpy networkx matplotlib scikit-learn tensorflow
+pip install --upgrade pip
+pip install -r requirements.txt
 ```
 
----
-
-## ✅ Rodando o `main.py`
-
-Execute o script principal com:
+#### 5. Execute o programa principal
 
 ```bash
 python main.py
 ```
 
-Certifique-se de que:  
-- Os arquivos de dados `.txt` estejam na pasta `data/`.  
-- O script `main.py` esteja na raiz do repositório.  
-- A pasta `images/` exista para armazenar os gráficos gerados automaticamente.
+### Desativar o ambiente virtual
 
----
+Quando terminar de trabalhar no projeto, você pode desativar o ambiente virtual:
+
+```bash
+deactivate
+```
+
+## Dependências
+
+O projeto utiliza as seguintes bibliotecas principais:
+
+- **pandas**: Manipulação e análise de dados
+- **numpy**: Computação numérica
+- **matplotlib**: Visualização de dados
+- **scikit-learn**: Machine learning
+- **tensorflow**: Deep learning
+- **networkx**: Análise de redes e grafos
+
+## Estrutura do Projeto
+
+```
+projeto/
+│
+├── main.py              # Arquivo principal
+├── requirements.txt     # Dependências do projeto
+├── README.md           # Este arquivo
+└── venv/               # Ambiente virtual (criado após setup)
+```
+
+## Solução de Problemas
+
+### Erro de importação do TensorFlow
+
+Se você encontrar erros com o TensorFlow, tente:
+
+```bash
+pip install tensorflow-cpu  # Para versão apenas CPU
+```
+
+### Problemas com o ambiente virtual no Windows
+
+Se tiver problemas para ativar o ambiente virtual no Windows, execute:
+
+```bash
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+```
+
+### Atualizar dependências
+
+Para atualizar todas as dependências:
+
+```bash
+pip install --upgrade -r requirements.txt
+```
+
+## Notas Adicionais
+
+- Certifique-se de que o ambiente virtual está ativo antes de executar o código
+- O arquivo `main.py` deve estar no diretório raiz do projeto
+- Se você estiver usando um IDE como VS Code, selecione o interpretador Python do ambiente virtual
